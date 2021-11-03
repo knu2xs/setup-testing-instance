@@ -1,19 +1,19 @@
-echo OFF
+ECHO OFF
 
 NET SESSION >nul 2>&1
 
 IF %ERRORLEVEL% EQU 0 (
-   echo.
+   ECHO.
 
 ) ELSE (
 
-   echo.-------------------------------------------------------------
-   echo ERROR: YOU ARE NOT RUNNING THIS WITH ADMINISTRATOR PRIVILEGES.
-   echo. -------------------------------------------------------------
-   echo. If you're seeing this, it means you don't have admin privileges!
-   echo.
-   echo. You will need to restart this script with Administrator privileges by right-clicking and select "Run As Administrator"
-   pause
+   ECHO.-------------------------------------------------------------
+   ECHO ERROR: YOU ARE NOT RUNNING THIS WITH ADMINISTRATOR PRIVILEGES.
+   ECHO. -------------------------------------------------------------
+   ECHO. If you're seeing this, it means you don't have admin privileges!
+   ECHO.
+   ECHO. You will need to restart this script with Administrator privileges by right-clicking and select "Run As Administrator"
+   PAUSE
 
    EXIT /B 1
 )
