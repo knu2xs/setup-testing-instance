@@ -39,14 +39,13 @@ choco install anaconda3 --params '"/AddToPath"'
 
 REFRESHENV
 
-XCOPY "\\redarchive4\business_analyst_public\US_2021\Builds\2.8.0.8\ESRI_BA_2021_US_Data_Update" "C:\setup\data\" /E /H
-
-START /WAIT msiexec.exe /i "C:\setup\data\setup.msi" /qb AgreeToLicense=Yes
-
 START /WAIT msiexec.exe /i "C:\setup\pro\ArcGISPro.msi" /qb ALLUSERS=1 SOFTWARE_CLASS=Professional AUTHORIZATION_TYPE=SINGLE_USE ACCEPTEULA=yes
 
 XCOPY "\\Esri.com\software\Esri\Released\Authorization_Files\ArcGISPro2.9\Single Use\Pro_AdvancedSU.prvc" "C:\setup\pro"
 "C:\Program Files\ArcGIS\Pro\bin\SoftwareAuthorizationPro.exe" -LIF "C:\setup\pro\Pro_AdvancedSU.prvc"
+
+XCOPY "\\redarchive4\business_analyst_public\US_2021\Builds\2.8.0.8\ESRI_BA_2021_US_Data_Update" "C:\setup\data\" /E /H
+START /WAIT msiexec.exe /i "C:\setup\data\setup.msi" /qb AgreeToLicense=Yes
 
 XCOPY "\\redarchive4\business_analyst_public\US_2021\Builds\2.8.0.8\SDLICs\BA_2021_US_NAT_Data_Bundle_w_MPI.sdlic" "C:\setup\pro"
 "C:\Program Files\ArcGIS\Pro\bin\DataLicInstall.exe" "C:\setup\pro\BA_2021_US_NAT_Data_Bundle_w_MPI.sdlic"
