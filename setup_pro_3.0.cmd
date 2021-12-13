@@ -35,7 +35,7 @@ choco install 7zip
 choco install vscode 
 choco install git 
 choco install anaconda3 --params '"/AddToPath"'
-choco install dotnet-5.0-runtime
+choco install dotnet-5.0-desktopruntime
 
 CALL refreshenv
 
