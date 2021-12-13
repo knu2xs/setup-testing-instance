@@ -39,9 +39,7 @@ choco install dotnet-5.0-desktopruntime
 
 CALL refreshenv
 
-START /WAIT msiexec.exe /i "C:\setup\pro\ArcGISPro.msi" /qb ALLUSERS=1 SOFTWARE_CLASS=Professional AUTHORIZATION_TYPE=SINGLE_USE ACCEPTEULA=yes
-
-"C:\Program Files\ArcGIS\Pro\bin\SoftwareAuthorizationPro.exe" /LIF "\\Esri.com\software\Esri\Released\Authorization_Files\ArcGISPro2.9\Single Use\Pro_AdvancedSU.prvc" /s
+START /WAIT msiexec.exe /i "C:\setup\pro\ArcGISPro.msi" /qb ALLUSERS=1 SOFTWARE_CLASS=Professional AUTHORIZATION_TYPE=SINGLE_USE ACCEPTEULA=yes LOCK_AUTH_SETTINGS=FALSE
 
 REG import "\\redarchive4\business_analyst_public\US_2021\US_2021_Install_Workaround\US_2021_Installation_Workaround.reg"
 START /WAIT msiexec.exe /i "\\redarchive4\business_analyst_public\US_2021\Builds\2.8.0.8\ESRI_BA_2021_US_Data_Update\setup.msi" /qb AgreeToLicense=Yes
