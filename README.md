@@ -19,7 +19,8 @@
         - Anaconda3
         
     - Install ArcGIS Pro for all users.
-    - Authorize Pro using a single use license file.
     - Install and license United States 2021 data.
     - Clone `arcgispro-py3` Conda environment as `arcgis`.
     - Set ArcGIS Pro to use `arcgis` environment.
+
+4. Optional: Install single-use license by running `license-single-use.cmd` as the current user (_not Administrator_).
