@@ -32,7 +32,10 @@ PAUSE
 choco feature enable -n=allowGlobalConfirmation
 
 choco install 7zip 
-choco install vscode 
+
+choco install vscode
+setx /M path "%path%;C:\Program Files\Microsoft VS Code\bin"
+
 choco install git 
 
 choco install anaconda3
