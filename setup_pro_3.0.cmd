@@ -42,6 +42,7 @@ choco install anaconda3
 setx /M path "%path%;C:\tools\Anaconda3;C:\tools\Anaconda3\condabin"
 
 choco install dotnet-desktopruntime
+choco install dotnet-8.0-desktopruntime
 
 CALL refreshenv
 
