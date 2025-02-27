@@ -1,6 +1,6 @@
 #  Setup Testing Instance
 
-1. Run `setup_pro_*.cmd` as administrator.
+1. Run `setup_pro.cmd` as administrator.
     - Creates directories for setup resources.
         - `C:\setup`
             - `C:\setup\pro`
@@ -12,6 +12,7 @@
 
 3. Return to the command prompt, press enter and let the script continue. It will... 
     - Install Chocolatey
+      
     - Use Chocolatey to install...
         - 7Zip
         - Git
@@ -19,8 +20,7 @@
         - Anaconda3
         
     - Install ArcGIS Pro for all users.
-    - Install and license United States 2021 data.
-    - Clone `arcgispro-py3` Conda environment as `arcgis`.
-    - Set ArcGIS Pro to use `arcgis` environment.
 
 4. Optional: Install single-use license by running `license-single-use.cmd` as the current user (_not Administrator_).
+
+5. Optional: Setup `arcgis` Conda environment by running `create_arcgis_environment.cmd` as the current user (_not Administrator_). This clones the default `arcgispro-py3` environment and sets ArcGIS Pro to use the new `arcgis` environment.
