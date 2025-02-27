@@ -41,8 +41,9 @@ choco install git
 choco install anaconda3
 setx /M path "%path%;C:\tools\Anaconda3;C:\tools\Anaconda3\condabin"
 
-choco install dotnet-desktopruntime
 choco install dotnet-8.0-desktopruntime
+
+choco install webview2-runtime
 
 CALL refreshenv
 
