@@ -53,7 +53,3 @@ IF NOT EXIST "D:/data/ba_data" MKDIR "D:/data/ba_data"
 CALL robocopy "\\redarchive4\business_analyst_public\US_2024\Builds\3.3.1.3\ESRI_BA_2024_US_Data_Update" "D:/data/ba_data/usa_2024" /mir /mt /z
 
 CALL "%PROGRAMFILES%\ArcGIS\Pro\bin\DataLicInstall.exe" "\\redarchive4\business_analyst_public\US_2024\Builds\3.3.1.3\SDLICs\Internal-BA-USA-2024-NAT-MPI-05_27_25.sdlic"
-
-conda create -n arcgis --clone "%PROGRAMFILES%\ArcGIS\Pro\bin\Python\envs\arcgispro-py3"
-
-CALL "%PROGRAMFILES%\ArcGIS\Pro\bin\Python\Scripts\proenv.bat" -p "C:\tools\Anaconda3\envs\arcgis"
