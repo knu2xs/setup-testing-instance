@@ -49,8 +49,8 @@ CALL refreshenv
 
 START /WAIT msiexec.exe /i "C:\setup\pro\ArcGISPro.msi" /qb ALLUSERS=1 SOFTWARE_CLASS=Professional AUTHORIZATION_TYPE=SINGLE_USE ACCEPTEULA=yes LOCK_AUTH_SETTINGS=FALSE
 
-IF NOT EXIST "D:/data/ba_data" MKDIR "D:/data/ba_data"
+IF NOT EXIST "C:/data/ba_data" MKDIR "C:/data/ba_data"
 
-CALL robocopy "\\redarchive4\business_analyst_public\US_2024\Builds\3.3.1.3\ESRI_BA_2024_US_Data_Update" "D:/data/ba_data/usa_2024" /mir /mt /z
+CALL robocopy "\\redarchive4\business_analyst_public\US_2024\Builds\3.3.1.9\ESRI_BA_2024_US_Data_Update" "C:/data/ba_data/usa_2024" /mir /mt /z
 
-CALL "%PROGRAMFILES%\ArcGIS\Pro\bin\DataLicInstall.exe" "\\redarchive4\business_analyst_public\US_2024\Builds\3.3.1.3\SDLICs\Internal-BA-USA-2024-NAT-MPI-05_27_25.sdlic"
+CALL "%PROGRAMFILES%\ArcGIS\Pro\bin\DataLicInstall.exe" "\\redarchive4\business_analyst_public\US_2024\Builds\3.3.1.9\SDLICs\Internal-BA-USA-2024-NAT-MPI-06_09_25.sdlic"
