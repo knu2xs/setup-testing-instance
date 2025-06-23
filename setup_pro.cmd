@@ -51,6 +51,6 @@ START /WAIT msiexec.exe /i "C:\setup\pro\ArcGISPro.msi" /qb ALLUSERS=1 SOFTWARE_
 
 IF NOT EXIST "C:/data/ba_data" MKDIR "C:/data/ba_data"
 
-CALL robocopy "\\redarchive4\business_analyst_public\US_2024\Builds\3.3.1.9\ESRI_BA_2024_US_Data_Update" "C:/data/ba_data/usa_2024" /mir /mt /z
+CALL robocopy "\\redarchive4\business_analyst_public\US_2025\Builds\3.5.1.6\ESRI_BA_2025_US_Data_Update" "C:/data/ba_data/usa_2025" /mir /mt /z
 
-CALL "%PROGRAMFILES%\ArcGIS\Pro\bin\DataLicInstall.exe" "\\redarchive4\business_analyst_public\US_2024\Builds\3.3.1.9\SDLICs\Internal-BA-USA-2024-NAT-MPI-06_09_25.sdlic"
+CALL "%PROGRAMFILES%\ArcGIS\Pro\bin\DataLicInstall.exe" "\\redarchive4\business_analyst_public\US_2025\Builds\3.5.1.6\SDLICs\Internal-BA-USA-2025-NAT-MPI-06_06_26.sdlic"
